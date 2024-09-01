@@ -12,11 +12,26 @@ body {
     height: auto;
 }
 
-#mem1, #mem2, #mem3 {
+.mem {
     width: 0;
+    height: auto;
 }
 
-#desc1, #desc2, #desc3 {
+.mem-desc {
     display: none;
 }
 
+#slider-btn-1:checked ~ .slider-imgs > .slider-imgs-container > #mem1,
+#slider-btn-2:checked ~ .slider-imgs > .slider-imgs-container > #mem2,
+#slider-btn-3:checked ~ .slider-imgs > .slider-imgs-container > #mem3,
+#slider-btn-4:checked ~ .slider-imgs > .slider-imgs-container > #mem4 {
+    width: 100%;
+    transition: 1s;
+}
+
+#slider-btn-1:checked ~ .slider-imgs > .slider-imgs-container > #desc1,
+#slider-btn-2:checked ~ .slider-imgs > .slider-imgs-container > #desc2,
+#slider-btn-3:checked ~ .slider-imgs > .slider-imgs-container > #desc3,
+#slider-btn-4:checked ~ .slider-imgs > .slider-imgs-container > #desc4 {
+    display: block;
+}
