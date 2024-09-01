@@ -1,3 +1,22 @@
 body {
     width: 100%;
 }
+
+.slider-imgs {
+    width: 90%;
+    height: auto;
+}
+
+.slider-imgs-container {
+    width: 100%;
+    height: auto;
+}
+
+#mem1, #mem2, #mem3 {
+    width: 0;
+}
+
+#desc1, #desc2, #desc3 {
+    display: none;
+}
+
