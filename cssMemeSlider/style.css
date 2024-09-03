@@ -5,14 +5,16 @@ body {
 
 .mem-slider {
     width: 96%;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
 
 .slider-imgs-container {
     width: 97%;
-    margin: 1em 1em 1em 1em;
+    margin: 1rem auto;
     height: auto;
     order: 1;
+    font-size: 0;
+ /*   display: flex; */
 }
 
 .desc-container {
@@ -21,17 +23,21 @@ body {
 }
 
 .mem {
-    width: 0;
-    height: auto;
-    border-radius: 1em;
+    width: 100%;
+    height: 0;
+    border-radius: 1rem;
+    order: 2;
+    opacity: 0;
+    flex-grow: 0;
 }
 
 .mem-desc {
-    display: none;
-    font-size: 2em;
+    display: block;
+    font-size: 0;
     color: #ffffff;
     letter-spacing: 0.1em;
     font-family: 'Arial-narrow', Helvetica, sans-serif;
+    opacity: 0;
 }
 
 #slider-btn-1:checked ~ .slider-imgs-container > #mem1,
@@ -39,14 +45,21 @@ body {
 #slider-btn-3:checked ~ .slider-imgs-container > #mem3,
 #slider-btn-4:checked ~ .slider-imgs-container > #mem4 {
     width: 100%;
+    height: auto;
     transition: 1s;
+    order: 1;
+    opacity: 1;
+    flex-grow: 1;
+    transition: opacity 1s ease-in-out;
 }
 
 #slider-btn-1:checked ~ .labels-desc > .desc-container > #desc1,
 #slider-btn-2:checked ~ .labels-desc > .desc-container > #desc2,
 #slider-btn-3:checked ~ .labels-desc > .desc-container > #desc3,
 #slider-btn-4:checked ~ .labels-desc > .desc-container > #desc4 {
-    display: block;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    font-size: 2rem;
 }
 
 .slider-btn-label {
@@ -99,10 +112,12 @@ button:hover {
     display: flex;
     flex-direction: column;
     background-color: #1E2022;
+    min-height: 96vh;
 }
 
 .labels {
     order: 10;
+    min-width: 18em;
 }
 
 .labels-desc {
@@ -110,5 +125,5 @@ button:hover {
     order: 10;
     display: flex;
     justify-content: space-between;
-    margin: 1em 1em 1em 1em;
+    margin: 1rem auto;
 }
