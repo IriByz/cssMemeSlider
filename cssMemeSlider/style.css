@@ -30,9 +30,8 @@ body {
     display: none;
     font-size: 2em;
     color: #ffffff;
-    font-weight: 100;
     letter-spacing: 0.1em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial-narrow', Helvetica, sans-serif;
 }
 
 #slider-btn-1:checked ~ .slider-imgs-container > #mem1,
@@ -51,24 +50,45 @@ body {
 }
 
 .slider-btn-label {
+    display: inline-block
+}
+
+.slider-button {
     display: inline-block;
     background-color: #71ABFF;
     width: 2em;
     height: 2em;
-    border-radius: 1em;
+    border: solid 0.2em #71ABFF;
+    border-radius: 2em;
     order: 10;
     margin: 1em;
+    transition-duration: 1s;
 }
 
 .slider-btn-label:hover {
     cursor: pointer;
 }
 
-#slider-btn-1:checked ~ .labels-desc > .labels > #btn-label1, 
-#slider-btn-2:checked ~ .labels-desc > .labels > #btn-label2,
-#slider-btn-3:checked ~ .labels-desc > .labels > #btn-label3,
-#slider-btn-4:checked ~ .labels-desc > .labels > #btn-label4 {
-    background-color: #102c4e;
+.slider-btn-label:hover span {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    transition-duration: 1s;
+}
+
+.slider-btn-label:active span {
+    background-color: #353535;
+    border-color: #353535;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#slider-btn-1:checked ~ .labels-desc > .labels > #btn-label1 > .slider-button, 
+#slider-btn-2:checked ~ .labels-desc > .labels > #btn-label2 > .slider-button,
+#slider-btn-3:checked ~ .labels-desc > .labels > #btn-label3 > .slider-button,
+#slider-btn-4:checked ~ .labels-desc > .labels > #btn-label4 > .slider-button {
+    background-color: transparent;
 }
 
 .slider-btn {
