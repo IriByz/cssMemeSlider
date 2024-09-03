@@ -127,3 +127,15 @@ button:hover {
     justify-content: space-between;
     margin: 1rem auto;
 }
+
+@media (max-width: 900px) {
+    .labels-desc {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .labels {
+        order: 1;
+        margin: 0 auto;
+    }
+}
