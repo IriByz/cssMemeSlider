@@ -6,6 +6,7 @@ body {
 .mem-slider {
     width: 96%;
     margin: 1rem auto;
+    min-width: 18rem;
 }
 
 .slider-imgs-container {
@@ -132,5 +133,12 @@ body {
     .labels {
         order: 1;
         margin: 0 auto;
+        min-width: 17rem;
+        gap: 1%;
+        justify-content: space-between;
+    }
+
+    .slider-button {
+        margin: 0.8rem;
     }
 }
