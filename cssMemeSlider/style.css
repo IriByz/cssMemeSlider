@@ -1,0 +1,144 @@
+body {
+    width: 100%;
+    margin: 0;
+}
+
+.mem-slider {
+    width: 96%;
+    margin: 1rem auto;
+    min-width: 18rem;
+}
+
+.slider-imgs-container {
+    width: 97%;
+    margin: 1rem auto;
+    height: auto;
+    font-size: 0;
+}
+
+.desc-container {
+    order: 5;
+    margin-top: 0.9rem;
+}
+
+.mem {
+    width: 100%;
+    height: 0;
+    border-radius: 1rem;
+    order: 2;
+    opacity: 0;
+    flex-grow: 0;
+}
+
+.mem-desc {
+    display: block;
+    font-size: 0;
+    color: #ffffff;
+    letter-spacing: 0.1rem;
+    font-family: 'Arial-narrow', Helvetica, sans-serif;
+    opacity: 0;
+}
+
+#slider-btn-1:checked ~ .slider-imgs-container > #mem1,
+#slider-btn-2:checked ~ .slider-imgs-container > #mem2,
+#slider-btn-3:checked ~ .slider-imgs-container > #mem3,
+#slider-btn-4:checked ~ .slider-imgs-container > #mem4 {
+    width: 100%;
+    height: auto;
+    transition: 1s;
+    order: 1;
+    opacity: 1;
+    flex-grow: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#slider-btn-1:checked ~ .labels-desc > .desc-container > #desc1,
+#slider-btn-2:checked ~ .labels-desc > .desc-container > #desc2,
+#slider-btn-3:checked ~ .labels-desc > .desc-container > #desc3,
+#slider-btn-4:checked ~ .labels-desc > .desc-container > #desc4 {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    font-size: 2rem;
+}
+
+.slider-btn-label {
+    display: inline-block;
+    height: 4.1rem;
+}
+
+.slider-button {
+    display: inline-block;
+    background-color: #71ABFF;
+    width: 2rem;
+    height: 2rem;
+    border: solid 0.2rem #71ABFF;
+    border-radius: 2rem;
+    order: 10;
+    margin: 1rem;
+    transition-duration: 1s;
+}
+
+.slider-btn-label:hover {
+    cursor: pointer;
+}
+
+.slider-btn-label:hover span {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    transition-duration: 1s;
+}
+
+.slider-btn-label:active span {
+    background-color: #353535;
+    border-color: #353535;
+}
+
+#slider-btn-1:checked ~ .labels-desc > .labels > #btn-label1 > .slider-button, 
+#slider-btn-2:checked ~ .labels-desc > .labels > #btn-label2 > .slider-button,
+#slider-btn-3:checked ~ .labels-desc > .labels > #btn-label3 > .slider-button,
+#slider-btn-4:checked ~ .labels-desc > .labels > #btn-label4 > .slider-button {
+    background-color: transparent;
+}
+
+.slider-btn {
+    display: none;
+}
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #1E2022;
+    min-height: 96vh;
+}
+
+.labels {
+    order: 10;
+    min-width: 20.2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.labels-desc {
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+}
+
+@media (max-width: 900px) {
+    .labels-desc {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .labels {
+        order: 1;
+        margin: 0 auto;
+        min-width: 17rem;
+        gap: 1%;
+        justify-content: space-between;
+    }
+
+    .slider-button {
+        margin: 0.8rem;
+    }
+}
